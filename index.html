@@ -147,7 +147,7 @@
                 </div >
                 <div class="flex rounded-2xl gap-2">
               <div><img class="m-auto max-w-100% max-h-100%" src="/images/seat-green.png" alt=""></div>
-                   <p class="text-xl font-medium"><span>40</span> Seats left</p>
+                   <p class="text-xl font-medium"><span id="availableSeats">40</span> Seats left</p>
                 </div>
               </div>
                 <!-- timing section start -->
@@ -210,73 +210,73 @@
       <div id="seat-alphabet" class=" seat ">
 <div class="first-row flex justify-between items-center mb-6">
 A
-<button id="A1" class="btn click py-4 px-12">A1</button>
-<button id="A2" class="btn py-4 px-12">A2</button>
-<button id="A3" class="btn py-4 px-12">A3</button>
-<button id="A4" class="btn py-4 px-12">A4</butto>
+<button id="A1" class="btn py-4 px-12"onclick="selectSeat('A1')">A1</button>
+<button id="A2" class="btn py-4 px-12"onclick="selectSeat('A2')">A2</button>
+<button id="A3" class="btn py-4 px-12"onclick="selectSeat('A3')">A3</button>
+<button id="A4" class="btn py-4 px-12"onclick="selectSeat('A4')">A4</butto>
 </div>
 <div class="first-row flex justify-between items-center mb-6">
  B
-<button id="B1" class="btn py-4 px-12">B1</button>
-<button id="B2" class="btn py-4 px-12">B2</button>
-<button id="B3" class="btn py-4 px-12">B3</button>
-<button id="B4" class="btn py-4 px-12">B4</butto>
+<button id="B1" class="btn py-4 px-12"onclick="selectSeat('B1')">B1</button>
+<button id="B2" class="btn py-4 px-12"onclick="selectSeat('B2')">B2</button>
+<button id="B3" class="btn py-4 px-12"onclick="selectSeat('B3')">B3</button>
+<button id="B4" class="btn py-4 px-12"onclick="selectSeat('B4')">B4</butto>
 </div>
 <div class="first-row flex justify-between items-center mb-6">
 C 
-<button id="C1" class="btn py-4 px-12">C1</button>
-<button id="C2" class="btn py-4 px-12">C2</button>
-<button id="C3" class="btn py-4 px-12">C3</button>
-<button id="C4" class="btn py-4 px-12">C4</butto>
+<button id="C1" class="btn py-4 px-12"onclick="selectSeat('C1')">C1</button>
+<button id="C2" class="btn py-4 px-12"onclick="selectSeat('C2')">C2</button>
+<button id="C3" class="btn py-4 px-12"onclick="selectSeat('C3')">C3</button>
+<button id="C4" class="btn py-4 px-12"onclick="selectSeat('C4')">C4</butto>
 </div>
 <div class="first-row flex justify-between items-center mb-6">
  D
-<button id="D1" class="btn py-4 px-12">D1</button>
-<button id="D2" class="btn py-4 px-12">D2</button>
-<button id="D3" class="btn py-4 px-12">D3</button>
-<button id="D4" class="btn py-4 px-12">D4</butto>
+<button id="D1" class="btn py-4 px-12"onclick="selectSeat('D1')">D1</button>
+<button id="D2" class="btn py-4 px-12"onclick="selectSeat('D2')">D2</button>
+<button id="D3" class="btn py-4 px-12"onclick="selectSeat('D3')">D3</button>
+<button id="D4" class="btn py-4 px-12"onclick="selectSeat('D4')">D4</butto>
 </div>
 <div class="first-row flex justify-between items-center mb-6">
 E 
-<button id="E1" class="btn py-4 px-12">E1</button>
-<button id="E2" class="btn py-4 px-12">E2</button>
-<button id="E3" class="btn py-4 px-12">E3</button>
-<button id="E4" class="btn py-4 px-12">E4</butto>
+<button id="E1" class="btn py-4 px-12"onclick="selectSeat('E1')">E1</button>
+<button id="E2" class="btn py-4 px-12"onclick="selectSeat('E2')">E2</button>
+<button id="E3" class="btn py-4 px-12"onclick="selectSeat('E3')">E3</button>
+<button id="E4" class="btn py-4 px-12"onclick="selectSeat('E4')">E4</butto>
 </div>
 <div class="first-row flex justify-between items-center mb-6">
 F
-<button id="F1" class="btn py-4 px-12">F1</button>
-<button id="F2" class="btn py-4 px-12">F2</button>
-<button id="F3" class="btn py-4 px-12">F3</button>
-<button id="F4" class="btn py-4 px-12">F4</butto>
+<button id="F1" class="btn py-4 px-12"onclick="selectSeat('F1')">F1</button>
+<button id="F2" class="btn py-4 px-12"onclick="selectSeat('F2')">F2</button>
+<button id="F3" class="btn py-4 px-12"onclick="selectSeat('F3')">F3</button>
+<button id="F4" class="btn py-4 px-12"onclick="selectSeat('F4')">F4</butto>
 </div>
 <div class="first-row flex justify-between items-center mb-6">
 G 
-<button id="G1" class="btn py-4 px-12">G1</button>
-<button id="G2" class="btn py-4 px-12">G2</button>
-<button id="G3" class="btn py-4 px-12">G3</button>
-<button id="G4" class="btn py-4 px-12">G4</butto>
+<button id="G1" class="btn py-4 px-12"onclick="selectSeat('G1')">G1</button>
+<button id="G2" class="btn py-4 px-12"onclick="selectSeat('G2')">G2</button>
+<button id="G3" class="btn py-4 px-12"onclick="selectSeat('G3')">G3</button>
+<button id="G4" class="btn py-4 px-12"onclick="selectSeat('G4')">G4</butto>
 </div>
 <div class="first-row flex justify-between items-center mb-6">
 H
-<button id="H1" class="btn py-4 px-12">H1</button>
-<button id="H2" class="btn py-4 px-12">H2</button>
-<button id="h3" class="btn py-4 px-12">H3</button>
-<button id="H4" class="btn py-4 px-12">H4</butto>
+<button id="H1" class="btn py-4 px-12"onclick="selectSeat('H1')">H2</button>
+<button id="H2" class="btn py-4 px-12"onclick="selectSeat('H2')">H1</button>
+<button id="H3" class="btn py-4 px-12"onclick="selectSeat('H3')">H3</button>
+<button id="H4" class="btn py-4 px-12"onclick="selectSeat('H4')">H4</butto>
 </div>
 <div class="first-row flex justify-between items-center mb-6">
 I
-<button id="I1" class="btn py-4 px-12">I1</button>
-<button id="I2" class="btn py-4 px-12">I2</button>
-<button id="I3" class="btn py-4 px-12">I3</button>
-<button id="I4" class="btn py-4 px-12">I4</butto>
+<button id="I1" class="btn py-4 px-12"onclick="selectSeat('I1')">I1</button>
+<button id="I2" class="btn py-4 px-12"onclick="selectSeat('I2')">I2</button>
+<button id="I3" class="btn py-4 px-12"onclick="selectSeat('I3')">I3</button>
+<button id="I4" class="btn py-4 px-12"onclick="selectSeat('I4')">I4</butto>
 </div>
 <div class="first-row flex justify-between items-center mb-6">
 J
-<button id="J1" class="btn py-4 px-12">J1</button>
-<button id="J2" class="btn py-4 px-12">J2</button>
-<button id="J3" class="btn py-4 px-12">J3</button>
-<button id="J4" class="btn py-4 px-12">J4</butto>
+<button id="J1" class="btn py-4 px-12"onclick="selectSeat('J1')">J1</button>
+<button id="J2" class="btn py-4 px-12"onclick="selectSeat('J2')">J2</button>
+<button id="J3" class="btn py-4 px-12"onclick="selectSeat('J3')">J3</button>
+<button id="J4" class="btn py-4 px-12"onclick="selectSeat('J4')">J4</butto>
 </div>
 </div>
        <!--lower part end  -->
@@ -288,7 +288,7 @@ J
           <p class=" border-dashed border-b-2 mx-4"></p>
      <div class="seat-class-price box-border bg-[#F7F8F8] mx-2  my-6 p-6 rounded-2xl">
       <div class="flex justify-between font-bold">
-        <p class="">Seat <span id="booking-seat" class="bg-[#1DD100] px-3 text-white rounded-md">0</span></p>
+        <p class="">Seat <span id="bookedSeats" class="bg-[#1DD100] px-3 text-white rounded-md">0</span></p>
         <p>Class</p>
         <p>Price</p>
       </div>

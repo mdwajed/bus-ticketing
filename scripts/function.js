@@ -13,8 +13,35 @@ buttons.forEach(function(button){
         this.style.backgroundColor = 'green'
     })
 })
-const currentBookingSeatNumber=document.getElementById('booking-seat');
-const currentBookingSeat=currentBookingSeatNumber.innerText;
-const newBookingSeat=parseInt(currentBookingSeat);
-const bookingSeat=newBookingSeat +1
-currentBookingSeatNumber.innerText=bookingSeat;
+
+// seat left part.
+  let availableSeats = 40; 
+  let bookedSeats = 0; 
+
+  // Function to handle seat selection
+  function selectSeat(seatId) {
+    const seatButton = document.getElementById(seatId);
+
+    if (!seatButton.classList.contains('selected')) { 
+      if (availableSeats > 0) { 
+        availableSeats--; 
+        bookedSeats++; 
+        seatButton.classList.add('selected');
+        updateSeatsDisplay(); 
+      } else {
+        alert("No seats available!");
+      }
+    } else {
+      alert("Seat already booked!");
+    }
+  }
+
+  // Function to update the display
+  function updateSeatsDisplay() {
+    const availableSeatsElement = document.getElementById('availableSeats');
+    const bookedSeatsElement = document.getElementById('bookedSeats');
+
+    availableSeatsElement.innerText = availableSeats; 
+    bookedSeatsElement.innerText = bookedSeats; 
+  }
+
