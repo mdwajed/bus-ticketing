@@ -10,75 +10,9 @@ function showElementById(elementId) {
 const buttons = document.querySelectorAll(".btn");
 buttons.forEach(function (button) {
   button.addEventListener("click", function () {
-    this.style.backgroundColor = "green";
+    this.style.backgroundColor = "#1DD100";
   });
 });
-// // total price functional.
-// let availableSeats = 40;
-// let bookedSeats = 0;
-// let seatPrice = 550; // Price per seat
-// const maxSeats = 4; // Maximum number of seats allowed to be selected
-
-// function selectSeat(seatId) {
-//   const seatButton = document.getElementById(seatId);
-
-//   if (!seatButton.classList.contains("selected")) {
-//     if (bookedSeats < maxSeats) {
-//       if (availableSeats > 0) {
-//         availableSeats--;
-//         bookedSeats++;
-//         seatButton.classList.add("selected");
-//         updateSeatsDisplay();
-//       } else {
-//         alert("No seats available!");
-//       }
-//     } else {
-//       alert("You can only select up to 4 seats.");
-//     }
-//   } else {
-//     availableSeats++;
-//     bookedSeats;
-//     seatButton.classList.remove("selected");
-//     updateSeatsDisplay();
-//   }
-// }
-
-// function updateSeatsDisplay() {
-//   const availableSeatsElement = document.getElementById("availableSeats");
-//   const bookedSeatsElement = document.getElementById("bookedSeats");
-//   const totalPriceElement = document.getElementById("totalPrice");
-
-//   availableSeatsElement.innerText = availableSeats;
-//   bookedSeatsElement.innerText = bookedSeats;
-//   totalPriceElement.innerText = "BDT " + bookedSeats * seatPrice;
-// }
-// // grand total price functional.
-
-//   let totalPrice =550; // Initialize total price
-//   let couponApplied = false;
-
-//   function applyCoupon() {
-//     // Assuming you have an input field with id "couponCode"
-//     const couponCode = document.getElementById('couponCode').value;
-
-//     // Apply coupon logic
-//     if (couponCode === 'NEW15' && !couponApplied) {
-//       totalPrice *= 0.85; // Apply 15% discount
-//       couponApplied = true;
-//       updateTotalPriceDisplay();
-//     } else if (couponCode === 'Couple 20' && !couponApplied) {
-//       totalPrice *= 0.80; // Apply 20% discount
-//       couponApplied = true;
-//       updateTotalPriceDisplay();
-//     } else {
-//       alert("Already Applied Coupon Code.");
-//     }
-//   }
-
-//   function updateTotalPriceDisplay() {
-//     const grandTotalElement = document.getElementById('grandTotal');
-//     grandTotalElement.innerText = 'BDT ' + totalPrice.toFixed(2); // Display total price with 2 decimal places
-// }
 
 let selectedSeats = 0;
 const seatPrice = 550; // Price per seat
@@ -111,7 +45,6 @@ function updateTotalPrice() {
   updateGrandTotal();
 }
 
-
 function applyCoupon() {
   const couponCode = document.getElementById("appliedCoupon").value;
   let discountPercentage = 0;
@@ -120,13 +53,21 @@ function applyCoupon() {
     discountPercentage = 15;
   } else if (couponCode === "Couple20") {
     discountPercentage = 20;
+   
   } else {
     alert("Invalid coupon code!");
     return;
   }
   const grandTotal = totalPrice - (totalPrice * discountPercentage) / 100;
   document.getElementById("grandTotal").innerText = "BDT " + grandTotal;
-}
+
+    //const Element=document.getElementById('discountCoupon');
+    //Element.classList.add('hidden');
+  }
+  function apply(){
+    const Element=document.getElementById('discountCoupon');
+    Element.classList.add('hidden');
+  }
 
 function updateSeatLeft() {
   document.getElementById("seatsLeft").innerText = seatsLeft;
@@ -138,3 +79,5 @@ function updateGrandTotal() {
 function updatedSelectedSeats() {
   document.getElementById("selectedSeats").innerText = selectedSeats;
 }
+
+//

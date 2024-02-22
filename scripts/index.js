@@ -6,8 +6,7 @@ function myFunction(){
 
 
 function play(){
-  hideElementById('buy-ticket');
   showElementById('success');
-  hideElementById('inputField');
+  hideElementById('buy-ticket');
   
 }
