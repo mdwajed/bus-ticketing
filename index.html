@@ -147,7 +147,7 @@
                 </div >
                 <div class="flex rounded-2xl gap-2">
               <div><img class="m-auto max-w-100% max-h-100%" src="/images/seat-green.png" alt=""></div>
-                   <p class="text-xl font-medium"><span id="availableSeats">40</span> Seats left</p>
+                   <p class="text-xl font-medium"><span id="seatsLeft">40</span> Seats left</p>
                 </div>
               </div>
                 <!-- timing section start -->
@@ -288,7 +288,7 @@ J
           <p class=" border-dashed border-b-2 mx-4"></p>
      <div class="seat-class-price box-border bg-[#F7F8F8] mx-2  my-6 p-6 rounded-2xl">
       <div class="flex justify-between font-bold">
-        <p class="">Seat <span id="bookedSeats" class="bg-[#1DD100] px-3 text-white rounded-md">0</span></p>
+        <p class="">Seat <span id="selectedSeats" class="bg-[#1DD100] px-3 text-white rounded-md">0</span></p>
         <p>Class</p>
         <p>Price</p>
       </div>
@@ -309,13 +309,14 @@ J
      <p>Total Price</p>
      <p id="totalPrice">BDT 0</p>
       </div>
-      <form class=" flex justify-center" >
-        <input class="apply p-3 px-12 rounded-l-xl" type="" value="Have Any Coupon">
-        <button class="coupon bg-[#1DD100] p-3 rounded-r-xl" type="">Apply</button>
-      </form>
+      <div class="flex justify-center">
+        <input id="appliedCoupon" class=" p-3 px-12 rounded-l-xl" type="text" placeholder="Enter coupon code">
+        <button class="coupon bg-[#1DD100] p-3 rounded-r-xl" type="button" onclick="applyCoupon()">Apply</button>
+      </div>
+      
       <div class="total-price flex justify-between py-4 font-bold">
-        <p> Grand Total </p>
-        <p>BDT 1100</p>
+        <p > Grand Total </p>
+        <p id="grandTotal">BDT 0</p>
          </div>
      </div>   
 <div class="personal-identity mx-6 ">
